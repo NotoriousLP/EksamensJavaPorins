@@ -20,11 +20,19 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
 		if(atbilde.equals("a;d")) punkti++;
 	}
+	public static void tresaisJautajums() {
+		do {
+			atbilde = JOptionPane.showInputDialog("3. Kādas ir masīvu priekšrocības?\na)Nav lieluma ierobežojuma\nb)Brīvķluve\nc)Koda optimizācija\nd)Masīva lielums nav fiksēts\n2 vai 3 atbildes var būt pareizas\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b\nAtbildes liekat alfabētu secībā!");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+		if(atbilde.equals("b;c")) punkti++;
+	}
 	
 	public static void main(String[] args) {
 	 Sakums();
 	 pirmaisJautajums();
 	 otraisJautajums();
+	 tresaisJautajums();
 	}
 
 }
