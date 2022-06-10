@@ -41,6 +41,20 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
 		if(atbilde.equals("b;c;d")) punkti++;
 	}
+	public static void piektaisJautajums() {
+		do {
+		atbilde = JOptionPane.showInputDialog("Kādas bija viendimensiju masīva kārtošana iebūvētas funkcijas, lai var izdukāt augošā secībā un dilstošā secībā"
+					+ "\na)Arrays.sort(masivs);"
+					+ "\nb)Collections.reverseOrder(masivs)"
+					+ "\nc)Sort.arrays(masivs);"
+					+ "\nd)Arrays.sort(masivs, Collections.reverseOrder())"
+					+"\n2 vai 3 atbildes var būt pareizas"
+					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
+					+ "\nAtbildes liekat alfabētu secībā!");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+		if(atbilde.equals("a;d")) punkti++;
+	}
 	
 	
 	public static void main(String[] args) {
@@ -49,7 +63,7 @@ public class Tests {
 	 otraisJautajums();
 	 tresaisJautajums();
 	 ceturtaisJautajums();
-	 
+	 piektaisJautajums();
 	}
 
 }
