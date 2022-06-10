@@ -10,21 +10,21 @@ public class Tests {
 		do{
 		atbilde = JOptionPane.showInputDialog("1. Kuri no tiem ir pareizi uzrakstīta masīva sintakse\na) int[] A\nb) int []A\nc) []int A\nd) int A[]\n 2 vai 3 atbildes var būt pareizas\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b\nAtbildes liekat alfabētu secībā!");
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
-				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("a;b;d")) punkti++;
 	}
 	public static void otraisJautajums() {
 		do {
 			atbilde = JOptionPane.showInputDialog("2. Ar kādiem veidiem var izdrukāt masīvus?\na) for each\nb)do while cikls\nc) while cikls\nd)for cikls\n 2 vai 3 atbildes var būt pareizas\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b\nAtbildes liekat alfabētu secībā!");
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
-				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("a;d")) punkti++;
 	}
 	public static void tresaisJautajums() {
 		do {
 			atbilde = JOptionPane.showInputDialog("3. Kādas ir masīvu priekšrocības?\na)Nav lieluma ierobežojuma\nb)Brīvķluve\nc)Koda optimizācija\nd)Masīva lielums nav fiksēts\n2 vai 3 atbildes var būt pareizas\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b\nAtbildes liekat alfabētu secībā!");
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
-				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("b;c")) punkti++;
 	}
 	public static void ceturtaisJautajums() {
@@ -38,7 +38,7 @@ public class Tests {
 					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
 					+ "\nAtbildes liekat alfabētu secībā!");
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
-				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("b;c;d")) punkti++;
 	}
 	public static void piektaisJautajums() {
@@ -52,11 +52,22 @@ public class Tests {
 					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
 					+ "\nAtbildes liekat alfabētu secībā!");
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
-				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("a;d")) punkti++;
 	}
-	
-	
+	public static void sestaisJautajums() {
+		do {
+			atbilde = JOptionPane.showInputDialog("Kura ir pareiza deklerēta masīva sintakse?"
+					+ "\na)int[] a = new int[10];"
+					+ "\nb)[]int a = {5,10,20,21};"
+					+ "\nc)int[] a = new double[14];"
+					+ "\nd)int a[] = {15,20,30,40};");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
+		if(atbilde.equals("a;d")) punkti++;
+	}
+
+
 	public static void main(String[] args) {
 	 Sakums();
 	 pirmaisJautajums();
@@ -64,6 +75,7 @@ public class Tests {
 	 tresaisJautajums();
 	 ceturtaisJautajums();
 	 piektaisJautajums();
+	 sestaisJautajums();
 	}
 
 }
