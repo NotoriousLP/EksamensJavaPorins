@@ -27,12 +27,29 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
 		if(atbilde.equals("b;c")) punkti++;
 	}
+	public static void ceturtaisJautajums() {
+		do {
+			atbilde = JOptionPane.showInputDialog("Ja ir dots masīvs A[5], atbildiet, kuri pēc elementu indeksiem nav pareizi"
+					+ "\na)0;1;2;3;4"
+					+ "\nb)0;2;4;6;8"
+					+"\nc)1;2;3;4;5"
+					+ "\nd)4;3;2;1;0"
+					+"\n2 vai 3 atbildes var būt pareizas"
+					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
+					+ "\nAtbildes liekat alfabētu secībā!");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d"));
+		if(atbilde.equals("b;c;d")) punkti++;
+	}
+	
 	
 	public static void main(String[] args) {
 	 Sakums();
 	 pirmaisJautajums();
 	 otraisJautajums();
 	 tresaisJautajums();
+	 ceturtaisJautajums();
+	 
 	}
 
 }
