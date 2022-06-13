@@ -66,7 +66,17 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("a;d")) punkti++;
 	}
-
+	public static void septitaisJautajums() {
+		do {
+		atbilde = JOptionPane.showInputDialog("7.Kā lineārā un binārā meklēšana meklē vērtības, kuru vēlies atrast"
+				+ "\na)Salīdzinot pirmo elementu ar meklējamo vērtību, ja nav tad turpina pie otrā."
+				+ "\nb)Sāk meklēt ciparu, kuru vēlaties no elementu beigām līdz elementu sākumam."
+				+ "\nc)Masīvs tiek sadalīts uz pusēm lai var sākt meklēt vērtības, kuras vēlaties."
+				+ "\nd)Masīvs tiek šķērsots secīgi un tiek pārbaudīts katrs elements.");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
+		if(atbilde.equals("a;c")) punkti++;
+	}
 
 	public static void main(String[] args) {
 	 Sakums();
@@ -76,6 +86,7 @@ public class Tests {
 	 ceturtaisJautajums();
 	 piektaisJautajums();
 	 sestaisJautajums();
+	 septitaisJautajums();
 	}
 
 }
