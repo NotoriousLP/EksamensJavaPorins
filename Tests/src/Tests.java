@@ -91,6 +91,21 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("b;c;d")) punkti++;
 	}
+	public static void devitaisJautajums() {
+		do {
+			atbilde = JOptionPane.showInputDialog("9.Kā selection sort un bubble sort kārto masīvus?"
+					+ "\na)Atrodot mazāko skaitli masīva un ieliekot to pirmā vietā un tā tālāk."
+					+ "\nb)Salīdzinot pirmo elementu ar otro un tā tālāk."
+					+ "\nc)Sadaliet masīvu mazākos apakšblokos, līdz tiek iegūti elementu pāri, un pēc tam apvienojiet tos tā, lai tie būtu sakārtoti."
+					+ "\nd)Izmanto iebūvēto funkciju."
+					+ "\n2 vai 3 atbildes var būt pareizas"
+					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
+					+ "\nAtbildes liekat alfabētu secībā!");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
+		if(atbilde.equals("a;b")) punkti++;
+	}
+	
 	
 	public static void main(String[] args) {
 	 Sakums();
@@ -102,6 +117,7 @@ public class Tests {
 	 sestaisJautajums();
 	 septitaisJautajums();
 	 astotaisJautajums();
+	 devitaisJautajums();
 	}
 
 }
