@@ -1,9 +1,9 @@
 import javax.swing.JOptionPane;
 
 public class Tests {
-	static int punkti = 0;
-	static String atbilde;
-	static String[] nepareizasAtbildes = {" "," "," "," "," "," "," "," "," "," "};
+	static int punkti = 0; //Mainīgais, kas skaitīs pareizās atbildes
+	static String atbilde; //Mainīgais, kuru es izmantošu metodēs
+	static String[] nepareizasAtbildes = {" "," "," "," "," "," "," "," "," "," "}; //Tukšs masīvs ar garumu 10, izmantošu rezultātam
 	public static void Sakums() {
 		JOptionPane.showMessageDialog(null, "Šis ir elektroniskais tests par Viendimensiju masīviem programmēšanas valodā Java\nTests satur 10 jautājumus, katram jautājumam 4 atbilžu varianti, no kuriem pareizi ir 2 vai 3 atbilžu varianti.");
 	}
@@ -20,9 +20,9 @@ public class Tests {
 		atbilde = atbilde.toLowerCase();
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
-		atbilde = atbilde.toLowerCase();
-		if(atbilde.equals("a;b;d")) punkti++;
-		else nepareizasAtbildes[0] = "1.";
+		atbilde = atbilde.toLowerCase(); //While cikls, lai nevar ievadīt neko nepareizu
+		if(atbilde.equals("a;b;d")) punkti++; //ja atbilde sakrīt ar to kas ir ierakstīts, tad pienāk punkts
+		else nepareizasAtbildes[0] = "1."; // ja nē, tad masīvā pieraksta "1." un tā pie katras metodes.
 	}
 	public static void otraisJautajums() {
 		do {
@@ -169,19 +169,21 @@ public class Tests {
 		else nepareizasAtbildes[9] = "10.";
 	}
 	public static void rezultats() {
-		if(punkti == 10) {
+		if(punkti == 10) { //Ja viss ir atbildēts pareizi, tad izvadīs ziņojumu, kad viss ir atbildēts pareizi.
 			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi uz visiem jautājumiem  "+punkti+" no 10");
 	
-	     }else if(punkti == 1) {
+	     }else if(punkti == 1) { //Ja tikai viens jautājums pareizs tad izvadīs ziņojumu, ka esi atbildēji pareizi tikai uz vienu jautājumu, šis ir ielikts galotnes dēļ
 			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi tikai "+punkti+" jautājumu no 10 jautājumiem."
 					+"\nJautājumi, kuri nebija pareizi: ");
-		}else{
+		}else{ //Ja vairāk par viens, tad izvadīs tādu pašu atbildi, tikai galotni samainīta.
 			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi "+punkti+" jautājumus no 10 jautājumiem"
 					+"\nJautājumi, kuri nebija pareizi: ");
 		}
+		//Ja punkti nav 10, tad izies cauri switch konstrukcijai
 		if(punkti!=10) {
 		for(int i=0; i<nepareizasAtbildes.length; i++) {
 			switch(nepareizasAtbildes[i]) {
+			//Switchā tagad skatīsies, kur ir "1." vai "2." utt. un izdrukās nepareizo jautājumu sarakstu.
 			case "1.": JOptionPane.showMessageDialog(null, "1. Kuri no tiem ir pareizi uzrakstīta masīva sintakse"
 					+ "\na)int[] A"
 					+ "\nb)int []A"
