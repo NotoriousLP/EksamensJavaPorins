@@ -77,7 +77,21 @@ public class Tests {
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
 		if(atbilde.equals("a;c")) punkti++;
 	}
-
+	public static void astotaisJautajums() {
+		do {
+			atbilde = JOptionPane.showInputDialog("Ir dots masīvs int A = {15,15,30,45,60,15}, kurā elementā atrodas skaitlis 15"
+					+ "\na)Skaitlis 15 atrodas 6 elementā"
+					+ "\nb)Skaitlis 15 atrodas 1 elementā"
+					+ "\nc)Skaitlis 15 atrodas 0 elementā"
+					+ "\nd)Skaitlis 15 atrodas 5 elementā"
+					+ "\n2 vai 3 atbildes var būt pareizas"
+					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas tad: a;b"
+					+ "\nAtbildes liekat alfabētu secībā!");
+		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
+				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
+		if(atbilde.equals("b;c;d")) punkti++;
+	}
+	
 	public static void main(String[] args) {
 	 Sakums();
 	 pirmaisJautajums();
@@ -87,6 +101,7 @@ public class Tests {
 	 piektaisJautajums();
 	 sestaisJautajums();
 	 septitaisJautajums();
+	 astotaisJautajums();
 	}
 
 }
