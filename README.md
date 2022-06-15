@@ -5,6 +5,6 @@ Eksāmens par tēmu Viendimensiju masīvi programmēšanas valodā Java
 
 - [x] Izstrādāt informatīvo mācību materiālu par viendimensiju masīviem Java.
 - [x] Izstrādat 10 jautājumu elektronisko testu Java programmēšanas valodā par viendimensiju masīviem.
-- [ ] Izstrādāt vismaz 10 black box testpiemērus
-- [ ] Izstrādāt vismaz 10 white box testpiemērus
+- [x] Izstrādāt vismaz 10 black box testpiemērus
+- [x] Izstrādāt vismaz 10 white box testpiemērus
 
