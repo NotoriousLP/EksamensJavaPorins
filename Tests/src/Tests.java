@@ -20,7 +20,7 @@ public class Tests {
 		atbilde = atbilde.toLowerCase();
 		}while(!atbilde.equals("a;b") && !atbilde.equals("a;c") && !atbilde.equals("a;d") &&  !atbilde.equals("b;c") &&  !atbilde.equals("b;d") &&  !atbilde.equals("c;d") 
 				&&  !atbilde.equals("a;b;c") &&  !atbilde.equals("a;b;d") &&  !atbilde.equals("b;c;d") && !atbilde.equals("a;c;d"));
-		atbilde = atbilde.toLowerCase(); //While cikls, lai nevar ievadīt neko nepareizu
+		 //While cikls, lai nevar ievadīt neko nepareizu
 		if(atbilde.equals("a;b;d")) punkti++; //ja atbilde sakrīt ar to kas ir ierakstīts, tad pienāk punkts
 		else nepareizasAtbildes[0] = "1."; // ja nē, tad masīvā pieraksta "1." un tā pie katras metodes.
 	}
