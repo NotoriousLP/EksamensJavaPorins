@@ -169,7 +169,7 @@ public class Tests {
 		else nepareizasAtbildes[9] = "10.";
 	}
 	public static void rezultats() {
-		if(punkti == 0) {
+		if(punkti == 0) { //ja nav vispār nekas atbildēts pareizi, tad izvadīs ziņojumu, ka nav atbildēts pareizi uz nevienu jautājumu.
 			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi uz nevienu jautājumu no 10 jautājumiem."
 					+"\nJautājumi, kuri nebija pareizi: ");
 		}else if(punkti == 10) { //Ja viss ir atbildēts pareizi, tad izvadīs ziņojumu, kad viss ir atbildēts pareizi.
