@@ -61,7 +61,7 @@ public class Tests {
 			atbilde = JOptionPane.showInputDialog("4.Ja ir dots masīvs A[5], atbildiet, kuri pēc elementu indeksiem nav pareizi"
 					+ "\na)0;1;2;3;4"
 					+ "\nb)0;2;4;6;8"
-					+"\nc)1;2;3;4;5"
+					+ "\nc)1;2;3;4;5"
 					+ "\nd)4;3;2;1;0"
 					+"\n2 vai 3 atbildes var būt pareizas"
 					+ "\nJums atbildes ir jāieraksta šādi: a;b;c, ja divas atbildes tad: a;b"
@@ -169,7 +169,10 @@ public class Tests {
 		else nepareizasAtbildes[9] = "10.";
 	}
 	public static void rezultats() {
-		if(punkti == 10) { //Ja viss ir atbildēts pareizi, tad izvadīs ziņojumu, kad viss ir atbildēts pareizi.
+		if(punkti == 0) {
+			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi uz nevienu jautājumu no 10 jautājumiem."
+					+"\nJautājumi, kuri nebija pareizi: ");
+		}else if(punkti == 10) { //Ja viss ir atbildēts pareizi, tad izvadīs ziņojumu, kad viss ir atbildēts pareizi.
 			JOptionPane.showMessageDialog(null, "Tu atbildēji pareizi uz visiem jautājumiem  "+punkti+" no 10");
 	
 	     }else if(punkti == 1) { //Ja tikai viens jautājums pareizs tad izvadīs ziņojumu, ka esi atbildēji pareizi tikai uz vienu jautājumu, šis ir ielikts galotnes dēļ
